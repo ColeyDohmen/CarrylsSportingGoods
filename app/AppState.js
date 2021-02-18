@@ -1,10 +1,16 @@
-import Value from "./Models/Value.js"
+import Item from "./Models/Carryls.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  /** @type {Value[]} */
-  values = []
+
+  money = 0
+
+  items = [new Item({name:"flashlight", price:"$10" ,description: "Lights up", stock: 3}),
+  new Item({name:"marshmallows", price:"$2",description: "Marshing it up", stock: 50}),
+]
+
+cart = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
