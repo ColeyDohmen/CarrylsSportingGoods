@@ -11,7 +11,9 @@ class CarrylsService {
 //   }
 buy(itemId){
     let item = ProxyState.items.find(i => i.id == itemId)
-    ProxyState.cart = [...ProxyState.cart, item]
+    if (ProxyState.money >= item.price){
+        ProxyState.cart = [...ProxyState.cart, item]
+        ProxyState.money-= item.price;} 
     console.log ("cart", ProxyState.cart)
     
 }

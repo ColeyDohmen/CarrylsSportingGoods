@@ -6,8 +6,8 @@ class AppState extends EventEmitter {
 
   money = 0
 
-  items = [new Item({name:"flashlight", price:"$10" ,description: "Lights up", stock: 3}),
-  new Item({name:"marshmallows", price:"$2",description: "Marshing it up", stock: 50}),
+  items = [new Item({name:"flashlight", price: 10 ,description: "Lights up", stock: 3}),
+  new Item({name:"marshmallows", price:2 ,description: "Marshing it up", stock: 50}),
 ]
 
 cart = []
